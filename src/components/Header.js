@@ -2,9 +2,8 @@ function Header() {
     return (
         <div className="jumbotron">
             <h1 className="display-4">Employee Directory</h1>
-            <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr className="my-4" />
-            <p>It uses utility classNamees for typography and spacing to space content out within the larger container.</p>
+            <p className="lead">This is a simple application to view employees. Filter by name or sort by name.</p>
+            <p>Click on Email or Phone Number to contact each employee.</p>
         </div>
     );
 }

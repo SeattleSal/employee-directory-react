@@ -31,26 +31,11 @@ class App extends React.Component {
     .catch(err => console.log('Error: ' + err));
   }
 
-  filterEmployees = () => {
-    // filter employees based on search string
-    const result = this.employees.filter(employee => employee.name.first.contains(this.search));
-    console.log(result)
-    this.setState({
-      employees: result
-    })
-
-  }
-
   render() {
     return (
         <div className="container">
           <Header />
           <Filters handleInputChange={this.handleInputChange}/>
-          <p>  {this.state.search} </p>
-          {/* {this.state.search ? 
-            const filteredemployees = this.state.employees.filter(employee => {
-            employee.name.first.contains(this.state.search)}
-            )} */}
           <Sorter />
           <Body employees={this.state.employees} search={this.state.search}/>
         </div>
