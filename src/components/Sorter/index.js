@@ -1,17 +1,23 @@
-import "./index.css"
+import "./index.css";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import Dropdown from "react-bootstrap/Dropdown";
 
-function Sorter() {
+function Sorter({handleSelect}) {
+
   return (
-  <div className = "form-group">
-    <label htmlFor="sort">Sort by...</label>
-    <select name="sort" id="sort">
-      <option value="sortFNameAZ">First Name (A - Z)</option>
-      <option value="sortFNameZA">First Name (Z - A)</option>
-      <option value="sortLNameAZ">Last Name (A - Z)</option>
-      <option value="sortLNameZA">Last Name (Z - A)</option>
-    </select>
-  </div>
-
+    <DropdownButton
+      alignRight
+      title="Sort by name"
+      id="dropdown-menu-align-right"
+      name="sort"
+      onSelect={handleSelect}
+    >
+      <Dropdown.Item eventKey="firstNameAZ">First Name (A - Z)</Dropdown.Item>
+      <Dropdown.Item eventKey="firstNameZA">First Name (Z - A)</Dropdown.Item>
+      <Dropdown.Divider />
+      <Dropdown.Item eventKey="lastNameAZ">Last Name (A - Z)</Dropdown.Item>
+      <Dropdown.Item eventKey="lastNameZA">Last Name (Z - A)</Dropdown.Item>
+    </DropdownButton>
   );
 }
 
