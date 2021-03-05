@@ -9,8 +9,8 @@ function Body({ employees, search }) {
         {employees
           .filter(
             (employee) =>
-              employee.name.first.toUpperCase().includes(search.toUpperCase()) ||
-              employee.name.last.toUpperCase().includes(search.toUpperCase())
+              employee.name.first.concat(employee.name.last)
+              .toUpperCase().includes(search.replace(/\s/g, '').toUpperCase())
           )
           .map((employee, index) => (
             <li className="media mt-1 t-1 border border-info" key={employee.cell}>
