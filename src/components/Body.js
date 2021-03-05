@@ -2,7 +2,7 @@ import PhoneIcon from './PhoneIcon'
 import EmailIcon from './EmailIcon'
 
 function Body({ employees, search }) {
-  console.log(employees);
+  // console.log(employees);
 
   return (
     <div>
