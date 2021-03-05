@@ -1,17 +1,21 @@
-function Body({ users }) {
-    console.log(users);
+function Body({ employees, search }) {
+    console.log(employees);
 
     return (
         <div className="container row">
-            {users.map(user => (
-                <div className="card" style={{width: '18rem'}}>
-                    <img src={user.picture.large} className="card-img-top" alt="..." />
+            {employees.filter((employee) => 
+                employee.name.first.toUpperCase().includes(search.toUpperCase()) ||
+                employee.name.last.toUpperCase().includes(search.toUpperCase())
+            )
+            .map((employee, index) => (
+                <div className="card" style={{width: '18rem'}} key={index}>
+                    <img src={employee.picture.large} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <h5 className="card-title">{user.name.first} {user.name.last}</h5>
-                        <p className="card-text">{user.location.city}, {user.location.state} {user.location.country}</p>
+                        <h5 className="card-title">{employee.name.first} {employee.name.last}</h5>
+                        <p className="card-text">{employee.location.city}, {employee.location.state} {employee.location.country}</p>
                     </div>
                     <ul className="list-group list-group-flush">
-                        <li className="list-group-item">{user.email} </li>
+                        <li className="list-group-item">{employee.email} </li>
                     </ul>
                 </div>
             ))}
