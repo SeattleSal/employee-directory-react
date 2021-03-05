@@ -1,6 +1,6 @@
 function SearchFilter({handleInputChange}) {
     return (
-        <div className="card mb-4">
+        <div className="card mb-2">
             <div className="card-body">
                 <form>
                     <div className="form-group">

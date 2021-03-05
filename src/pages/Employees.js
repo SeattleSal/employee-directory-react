@@ -3,20 +3,19 @@ import Header from "../components/Header";
 import Body from "../components/Body";
 import API from "../utils/API";
 import SearchFilter from "../components/SearchFilter";
-import Sorter from "../components/Sorter/index";
+import Sorter from "../components/Sorter";
 
-// add components - Header, Body,
 function Employees() {
   const [employees, setEmployees] = useState([]);
   const [search, setSearch] = useState("");
-  const [sort, setSort] = useState("");
+  const [sortType, setSortType] = useState("");
 
   // upon page load, call method to get employees
   useEffect(() => {
     getEmployees();
   }, []);
 
-  // call API function to get employees
+  // call API function to get employees and populate employees state
   const getEmployees = () => {
     API.getEmployees()
       .then((res) => setEmployees(res.data.results))
@@ -25,18 +24,17 @@ function Employees() {
 
   // handle input for search
   const handleInputChange = (event) => {
-    // console.log(event);
     const { value } = event.target;
     setSearch(value);
   };
 
   // handle drop down for sort
-  const handleSelect = (sortType) => {
+  const handleSelect = (type) => {
     // console.log("Sort: " + sortType);
-    setSort(sortType);
-    // console.log("sort: " + sort);
+    setSortType(type);
+    console.log(sortType)
     let sortedEmployees;
-    switch (sortType) {
+    switch (type) {
       case "firstNameAZ":
         sortedEmployees = employees.sort((a, b) =>
           a.name.first.localeCompare(b.name.first)

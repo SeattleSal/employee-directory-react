@@ -2,7 +2,6 @@ import PhoneIcon from './PhoneIcon'
 import EmailIcon from './EmailIcon'
 
 function Body({ employees, search }) {
-  // console.log(employees);
 
   return (
     <div>
@@ -14,7 +13,7 @@ function Body({ employees, search }) {
               employee.name.last.toUpperCase().includes(search.toUpperCase())
           )
           .map((employee, index) => (
-            <li className="media mt-1" key={employee.cell}>
+            <li className="media mt-1 t-1 border border-info" key={employee.cell}>
               <img src={employee.picture.large} className="mr-3" alt=""/>
               <div className="media-body">
                 <h5 className="card-title">
