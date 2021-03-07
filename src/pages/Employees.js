@@ -32,7 +32,7 @@ function Employees() {
   const handleSelect = (type) => {
     // console.log("Sort: " + sortType);
     setSortType(type);
-    console.log(sortType)
+    // console.log(sortType)
     let sortedEmployees;
     switch (type) {
       case "firstNameAZ":
@@ -67,6 +67,11 @@ function Employees() {
             break;
     }
   };
+
+
+  const sortEmployees = () => {
+    
+  }
 
   return (
     <div className="container">
