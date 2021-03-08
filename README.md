@@ -15,7 +15,7 @@
 This application is a employee directory created with React. 
 
 ## Links
-* Live Website: 
+* Live Website: https://seattlesal-employee-directory.herokuapp.com/
 * Github Link: https://github.com/SeattleSal/employee-directory-react
 
 ## User_Story
@@ -36,10 +36,10 @@ The user should be able to:
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Additional dependencies are:
-* [axios]()
-* [bootstrap]() for styling elements
-* [react-bootstrap]() for styling the drop down. 
-* [fontawesome]() for phone and mail icons.
+* [axios](https://www.npmjs.com/package/axios) for making API calls
+* [bootstrap](https://www.npmjs.com/package/bootstrap) for styling elements
+* [react-bootstrap](https://react-bootstrap.github.io/) for styling the drop down. 
+* [fontawesome](https://fontawesome.com/how-to-use/on-the-web/using-with/react) for phone and mail icons.
 
 There is a `package.json` included, the following commands should be run to install dependencies:
 
@@ -58,7 +58,8 @@ The application displays a one page application listing the 25 random employees 
 
 See Screenshots:<br>
 Employee Page: <br>
-![Home Page](./assets/home.JPG)<br>
+![Home Page](./assets/screenshot.JPG)<br>
+![Sort Options](./assets/sortOptions.JPG)
 
 ## License
 
