@@ -57,9 +57,8 @@ npm start
 The application displays a one page application listing the 25 random employees and their name, email, phone number and location. The user can search by first name and last name. The user can sort by first name or by last name. The user can contact the employoee by clicking on the phone number to call them or clicking on the email to start an email. 
 
 See Screenshots:<br>
-Employee Page: <br>
-![Home Page](./assets/screenshot.JPG)<br>
-![Sort Options](./assets/sortOptions.JPG)
+![Directory](./assets/screenshot.JPG)<br>
+![Sort Options](./assets/sort-options.JPG)
 
 ## License
 
