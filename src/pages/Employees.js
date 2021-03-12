@@ -68,11 +68,6 @@ function Employees() {
     }
   };
 
-
-  const sortEmployees = () => {
-    
-  }
-
   return (
     <div className="container">
       <Header />
